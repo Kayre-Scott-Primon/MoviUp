@@ -20,13 +20,13 @@ export default StyleSheet.create({
           fontSize: 20,
           fontWeight: '800',
           color: '#fff',
-          maxWidth: windowWidth*0.65
+          width: windowWidth*0.6
      },
      sinopse: {
           fontSize: 14,
           fontWeight: '500',
           color: '#fff',
-          width: windowWidth*0.65
+          width: windowWidth*0.6
      },
      data: {
           fontSize: 15,
@@ -34,7 +34,7 @@ export default StyleSheet.create({
           color: '#fff'
      },
      capa: {
-          width: '22%',
+          width: '25%',
           height: '90%',
           margin: 10
      }

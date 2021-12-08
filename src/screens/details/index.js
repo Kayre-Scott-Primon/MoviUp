@@ -9,7 +9,6 @@ import {
     FlatList,
     Linking
 } from 'react-native'
-import moment from "moment"
 import api from "../../services/api"
 import { Icon } from "react-native-elements"
 import { apiTOKEN } from "../../services/tokens"
@@ -38,7 +37,7 @@ function Details({navigation}){
      }
 
      async function linkHomePage() {
-          await Linking.openURL(details.homepage);;
+          await Linking.openURL(details.homepage);
      }
 
      return(

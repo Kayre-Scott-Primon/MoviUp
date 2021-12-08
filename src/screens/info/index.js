@@ -4,6 +4,8 @@ import {
     View,
     Text,
     Image,
+    Linking,
+    ScrollView,
     TouchableOpacity,
 } from 'react-native'
 import { Icon } from "react-native-elements"
@@ -13,7 +15,7 @@ function Info({navigation}){
      useEffect(() => {})
 
      return(
-          <View style={styles.container}>
+          <ScrollView style={styles.container}>
                <View style={styles.headerContainer}>
                     <Text style={styles.textHeader}>Informações</Text>
                     <TouchableOpacity onPress={() => {navigation.goBack()}}>
@@ -27,7 +29,7 @@ function Info({navigation}){
                     />
                     <View style={styles.containerText}>
                          <Text style={styles.text1}>Objetivo do App: </Text>
-                         <Text style={styles.text2}>Apresentar os lançamentos de filmes</Text>
+                         <Text  ellipsizeMode='tail' numberOfLines={2} style={styles.text2}>Apresentar os lançamentos de filmes</Text>
                     </View>
                     <View style={styles.containerText}>
                          <Text style={styles.text1}>Desenvolvido por: </Text>
@@ -43,10 +45,16 @@ function Info({navigation}){
                     </View>
                     <View style={styles.containerText}>
                          <Text style={styles.text1}>Data da ultima atualização: </Text>
-                         <Text style={styles.text2}>03/12/2021</Text>
+                         <Text style={styles.text2}>08/12/2021</Text>
+                    </View>
+                    <View style={[styles.containerText, {flexDirection: 'column'}]}>
+                         <Text style={styles.text1}>Codigo do app presente no GitHub: </Text>
+                         <TouchableOpacity onPress={async() => await Linking.openURL('https://github.com/Kayre-Scott-Primon/MoviUp/tree/master')}>
+                              <Text style={[styles.text2, {color: '#17f'}]}>https://github.com/Kayre-Scott-Primon/MoviUp/tree/master</Text>
+                         </TouchableOpacity>
                     </View>
                </View>
-          </View>
+          </ScrollView>
      ) 
 }
 
