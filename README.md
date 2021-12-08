@@ -1,4 +1,4 @@
-# MoviUp
+# MovieUp
 App to show upcoming movie releases
 
 App create to show upcoming movies release. 
